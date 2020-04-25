@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario</title>
+<script>
+     function operacao (){
+        let n1 = parseInt(document.body.children[1].children[0].value)
+        let n2 = parseInt(document.body.children[2].children[0].value)
+        let op = n1 / 100 * n2
+        window.alert (n1 - op)
+     }
+
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    <h1>Calculadora de Salario</h1>
+    <div><input placeholder= "Salario" type="number"></div>
+    <div><input placeholder= "Porcentagem" type="number"></div>
+    <div>
+        <button onclick="operacao()">Calcular</button>
+        
+</body>
+</html>
