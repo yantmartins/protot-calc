@@ -4,16 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  <script>
+       function somar() {
+            let n1 = parseInt(document.body.children[1].children[0].value)
+            let n2 = parseInt(document.body.children[2].children[0].value)
+            let s = n1 + n2
+            window.alert(s)
+        }
+
+        function subtrair(){
+            let n1 = parseInt(document.body.children[1].children[0].value)
+            let n2 = parseInt(document.body.children[2].children[0].value)
+            let su = n1 - n2
+            window.alert(su)
+        } 
+
+        function multiplicar(){
+            let n1 = parseInt(document.body.children[1].children[0].value)
+            let n2 = parseInt(document.body.children[2].children[0].value)
+            let mt = n1 * n2
+            window.alert(mt)
+        }
+
+        function dividir(){
+            let n1 = parseInt(document.body.children[1].children[0].value)
+            let n2 = parseInt(document.body.children[2].children[0].value)
+            let dv = n1 / n2
+            window.alert(dv)
+        }
+        
+  </script>
+  
+
 </head>
 <body>
     <h1>Calculadora</h1>
     <div><input placeholder= "numero1" type="number"></div>
     <div><input placeholder= "numero2" type="number"></div>
     <div>
-        <button>+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
+        <button onclick="somar()">+</button>   
+        <button onclick="subtrair()">-</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="dividir()">/</button>
     </div>
 </body>
 </html>
