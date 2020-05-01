@@ -9,8 +9,8 @@
         let n1 = parseInt(document.body.children[1].children[0].value)
         let n2 = parseInt(document.body.children[2].children[0].value)
         let op = n1 - (n1 / 100 * n2)
-        window.alert (op)
-       //resultado.innerText = op
+        //window.alert (op)
+       resultado.innerText = op
      }
 
 
@@ -26,11 +26,11 @@
 </head>
 <body>
     <h1>Calculadora de Salario</h1>
-    <div><input placeholder= "Salario" type="number"></div>
-    <div><input placeholder= "Porcentagem" type="number"></div>
+    <div><input id="campo1" placeholder= "Salario" type="number"></div>
+    <div><input id= "campo2" placeholder= "Porcentagem" type="number"></div>
     <div>
         <button onclick="operacao()">Calcular</button>
-        
+        <div id="resultado"> </div>   
      
 </body>
 </html>
