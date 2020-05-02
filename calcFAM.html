@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Bonus Familiar</title>
+    <script>
+           function BonusFamiliar (){
+            let salario = parseFloat(document.body.children[1].children[0].value)
+            let filhos =  parseFloat(document.body.children[2].children[0].value)
+            let parcial = parseFloat (salario + ((salario / 100 * 5 ) * filhos))
+            let final =   parseFloat (parcial / 100 * 6)
+
+             salario.innerText = salario
+             bonus.innerText = ((salario / 100 * 5) * f)
+             total.innerText = final
+             desconto.innerText = 
+           
+           }
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Calcular Salário + Bônus Familiar</h1>
+    <div><input id="campo1" placeholder= "Salário" type="number"></div>
+    <div><input id= "campo2" placeholder= "Quantidade de Filhos" type="number"></div>
+    <div>
+        <button onclick="calculoBonus()">Calcular</button>
+        <div id="Salário"> </div>
+        <div id="Bônus"> </div>
+        <div id="Total"> </div>
+        <div id="Desconto"> </div>
+        <div id="Líquido"> </div> 
+    
+</body>
+</html>
