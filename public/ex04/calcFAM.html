@@ -5,36 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculo Bonus Familiar</title>
     <script>
-           function BonusFamiliar (){
-            let salario = parseFloat(document.body.children[1].children[0].value)
-            let filhos =  parseFloat(document.body.children[2].children[0].value)
-            let parcial = parseFloat (salario + ((salario / 100 * 5 ) * filhos))
-            let final =   parseFloat (parcial / 100 * 6)
-
-             salario.innerText = salario
-             bonus.innerText = ((salario / 100 * 5) * f)
-             total.innerText = final
-             desconto.innerText = 
-           
-           }
-
-
-
-
+         function Calcular() {
+        let n1 = parseInt(document.body.children[1].children[1].value)
+        let n2 = parseInt(document.body.children[2].children[1].value)
+        let n3 = parseInt(n2 * 5)
+        let n4 = parseInt(6) 
+        let n5 = parseInt(100)
+        let a = n3 / n5 * n1 + n1
+        let b = n4 / n5 * a 
+        let c = a - b
+        let d = n3 / n5 * n1
+        
+        salario.innerText = n1
+        bonus.innerText = d
+        total.innerText = a
+        desconto.innerText = b      
+        liquido.innerText = c
+        
+        }
     </script>
+   
 </head>
-
 <body>
-    <h1>Calcular Salário + Bônus Familiar</h1>
-    <div><input id="campo1" placeholder= "Salário" type="number"></div>
-    <div><input id= "campo2" placeholder= "Quantidade de Filhos" type="number"></div>
+    <h1>Salário + Bônus Familiar</h1>
+    <div id="sal">
+        <label>Informe o salário:</label>
+        <input size="10">
+    </div>
+    <div id="fil">
+        <label>Informe quantidade de filhos:</label>
+        <input size="10">
+    </div>
     <div>
-        <button onclick="calculoBonus()">Calcular</button>
-        <div id="Salário"> </div>
-        <div id="Bônus"> </div>
-        <div id="Total"> </div>
-        <div id="Desconto"> </div>
-        <div id="Líquido"> </div> 
-    
+        <button class="bot" onclick="Calcular()">Calcular</button>
+    </div>
+     <div class="sal">
+        <label>Salário:</label>   
+        <div id="salario"> </div>
+    </div>
+    <div class="bon">
+        <label>Bônus:</label>
+        <div id="bonus"> </div>
+    </div>
+    <div class="tot">
+        <label>Total:</label>
+        <div id="total"> </div>
+    </div>
+     <div class="desc">
+        <label>Desconto:</label>
+        <div id="desconto"> </div>
+    </div>
+    <div class="liq">
+        <label>Líquido:</label>
+        <div id="liquido"> </div>
+    </div>
 </body>
+
 </html>
